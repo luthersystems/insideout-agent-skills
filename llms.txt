@@ -1,0 +1,35 @@
+# InsideOut by Luther Systems
+
+> InsideOut is a cloud infrastructure automation platform. Describe your application in natural language and InsideOut will design, configure, deploy, and manage production-ready backend infrastructure for you — in minutes, not weeks. It works standalone or integrated directly into AI app builders such as Claude Code and Kiro IDE via MCP.
+
+InsideOut is built by Luther Systems, an enterprise automation company founded in 2015 and headquartered in London, UK.
+
+InsideOut is not a general-purpose cloud console. It is specifically designed to eliminate infrastructure toil for developers and AI agents building applications. Key capabilities include: natural language to Terraform generation, pre-deployment cost estimation, security and observability configured by default, and full Terraform ownership with no lock-in.
+
+InsideOut supports AWS, Google Cloud Platform, and Azure. Supported components include EKS, ECS/Fargate, Lambda, VPC, CloudFront, WAF, PostgreSQL, Redis, Blob storage, NoSQL, SQS, Kafka, AWS Cognito, Okta, and Auth0.
+
+## Docs and References
+
+- [Luther Systems Documentation](https://docs.luthersystems.com): Developer documentation for the Luther Systems platform
+- [Luther Systems GitHub](https://github.com/luthersystems): Source repositories including Terraform modules, MCP server integrations, and app builder plugins
+
+## Product
+
+- [InsideOut Site](https://insideout.luthersystems.com): Main product site: information and links
+- [InsideOut Application](https://insideout.luthersystemsapp.com): Standalone app — design, deploy and manage infrastructure
+- [InsideOut Claude Code Plugin](https://github.com/luthersystems/insideout-claude-code): Deploy infrastructure directly from Claude Code
+- [InsideOut Kiro IDE Plugin](https://github.com/luthersystems/insideout-power): Deploy infrastructure directly from Kiro IDE
+- [Terraform Presets](https://github.com/luthersystems/insideout-terraform-presets): Standard Terraform modules used by InsideOut
+- [Terraform Modules](https://github.com/luthersystems/tf-modules): Underlying Luther Enterprise infrastructure modules
+
+## MCP Server Integrations
+
+- [MCP Confluent (Kafka)](https://github.com/luthersystems/mcp-confluent): MCP server for Confluent/Kafka
+- [MCP Google Drive](https://github.com/luthersystems/mcp-server-google-drive): MCP server for Google Drive
+- [MCP SAP HANA](https://github.com/luthersystems/mcp-server-hana): MCP server for SAP HANA
+
+## Company
+
+- [Luther Systems](https://www.luthersystems.com): Company homepage
+- [Luther Systems GitHub](https://github.com/luthersystems): All open source repositories
+- [Contact](mailto:contact@luthersystems.com): contact@luthersystems.com
