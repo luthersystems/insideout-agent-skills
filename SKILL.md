@@ -226,7 +226,7 @@ Only include lines where you have information. Keep it general and anonymized.
 1. Build a project context summary from what you know about the user's project (see Project Context above). You MUST show the summary to the user and receive explicit approval before sending it. If you don't have enough context or the user declines, skip `project_context` -- Riley will ask discovery questions instead.
 2. Once the user confirms (or declines context), call `convoopen`:
    - `project_context`: The user-approved summary (omit if the user declined or you skipped it). Must not contain credentials, secrets, PII, source code, or internal URLs.
-   - `source`: Set this to the IDE/agent platform. Accepted values: `"claude-code"`, `"kiro"`, `"cursor"`, `"vscode"`, `"windsurf"`, `"web"`. Defaults to `"mcp"` if omitted. This controls the credential connect screen UI. For platforms not in this list (e.g. Codex), use `"web"`.
+   - `source`: Set this to the IDE/agent platform you are running in. This controls the "Open {IDE}" button on the credential connect screen. Accepted values: `"claude-code"`, `"codex"`, `"antigravity"`, `"kiro"`, `"cursor"`, `"vscode"`, `"windsurf"`, `"web"`, `"mcp"`. Use `"web"` only for browser-based interfaces. If your platform isn't listed, use its lowercase name. Defaults to `"mcp"` if omitted.
 3. Display Riley's message to the user. The tool response contains delimiters like `=== Riley ===`, `== Message ==`, `== End ==`, `=== End ===`. **Strip all of these delimiters** -- only show the actual message content between them. Keep your own commentary minimal.
 
 ### Your role: user-mediated conversation
