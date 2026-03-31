@@ -33,7 +33,7 @@ InsideOut eliminates this. You describe your application; InsideOut handles the 
 | Security defaults | Manual | Automatic |
 | Cost visibility | Post-deploy billing | Pre-deploy estimates |
 | Observability setup | Manual | Day one |
-| AI app builder integration | None | Native (Claude Code, Kiro) |
+| AI app builder integration | None | Native (Claude Code, Codex, Kiro, Antigravity) |
 | Terraform ownership | Yes | Yes (generated, exportable) |
 
 ---
@@ -53,7 +53,7 @@ InsideOut eliminates this. You describe your application; InsideOut handles the 
 
 Once installed, just ask:
 
-> "Build me a scalable API backend on AWS with a database and auth."
+> "Build me a scalable backend for my golang microservices app on AWS with a DB and auth."
 
 InsideOut will:
 1. Propose an architecture (ECS, RDS, Cognito, ALB, VPC...)
@@ -62,7 +62,7 @@ InsideOut will:
 4. Deploy to your AWS or GCP account
 
 ```
-You: "I need infrastructure for an e-commerce platform, 50k monthly users on AWS"
+You: "I need infrastructure for an e-commerce platform, 1k monthly users on AWS"
 
 Riley: "I'd recommend ECS for your containers, RDS PostgreSQL for your database,
         ElastiCache Redis for sessions, and an ALB. Estimated cost: ~$350/month.
@@ -97,7 +97,7 @@ If you'd rather describe what you want than manually wire it together -- this is
 
 | Path | Best for | Install |
 |------|----------|---------|
-| **This repo** (recommended) | Portable skill across multiple AI tools | `npx skills add luthersystems/insideout-agent-skills` |
+| **This repo** (recommended for Codex) | Portable skill across multiple AI tools | `npx skills add luthersystems/insideout-agent-skills` |
 | **[Claude Code plugin](https://github.com/luthersystems/insideout-claude-code)** | Best native Claude Code experience | `/plugin marketplace add luthersystems/insideout-claude-code` |
 | **[Kiro power](https://github.com/luthersystems/insideout-power)** | Best native Kiro experience | Add power from GitHub: `luthersystems/insideout-power` |
 | **[Web app](https://insideout.luthersystemsapp.com/)** | No install required | Open in browser |
@@ -166,6 +166,26 @@ For the full power experience (steering files, design pattern guides, auto-appro
 2. Click **Add power from GitHub**
 3. Enter: `luthersystems/insideout-power`
 
+### Antigravity
+
+```bash
+npx skills add luthersystems/insideout-agent-skills --agent antigravity
+```
+
+Then add the MCP server in Antigravity: "..." menu → MCP Servers → Manage MCP Servers → View raw config:
+
+```json
+{
+  "mcpServers": {
+    "insideout": {
+      "serverUrl": "https://app.luthersystems.com/v1/insideout-mcp"
+    }
+  }
+}
+```
+
+> **Note:** Antigravity uses `serverUrl`, not `url`.
+
 ### Manual Installation
 
 ```bash
@@ -177,7 +197,7 @@ The `~/.agents/skills/` directory is the standard cross-tool location. Most AI c
 
 ---
 
-## Supported Services (50+)
+## Supported Services (60+)
 
 | Category | AWS | GCP |
 |----------|-----|-----|
@@ -192,7 +212,7 @@ The `~/.agents/skills/` directory is the standard cross-tool location. Most AI c
 | **CI/CD** | CodePipeline, GitHub Actions | Cloud Build |
 | **Backup** | AWS Backup | GCP Backups |
 
-Architecture patterns: AI Stack, Microservices, Serverless. Azure support is also available.
+Architecture patterns: AI Stack, Microservices, Serverless. Azure support is upcoming.
 
 ---
 
@@ -211,7 +231,7 @@ Security best practices applied automatically. Observability configured from day
 You own the generated Terraform files. Use InsideOut defaults or override any setting. No lock-in; the output is standard infrastructure-as-code.
 
 ### Managed Operations
-Luther Systems sets up and manages critical infrastructure. Ongoing updates, patching, and operational support included.
+Luther Systems sets up and manages critical infrastructure. Ongoing updates and operational support included.
 
 ---
 
@@ -229,14 +249,6 @@ InsideOut uses a multi-agent AI system behind a single MCP server:
 | **Axel** | Deployment orchestration |
 
 From your perspective, you're talking to Riley. The other agents work behind the scenes. These capabilities are exposed as tools inside your AI environment, so you use them conversationally.
-
-### Deployment Modes
-
-**Mode 1: Within InsideOut** -- Use the InsideOut platform directly to build, manage, and monitor your application infrastructure.
-
-**Mode 2: Within Your AI App Builder** -- InsideOut integrates into AI-native development environments including Claude Code and Kiro IDE. Design, price, review, and deploy without leaving your editor.
-
----
 
 ## Security & Auth Model
 
@@ -262,7 +274,7 @@ InsideOut uses a library of battle-tested, standard Terraform modules composed f
 ## FAQ
 
 **Can I use InsideOut without the InsideOut UI?**
-Yes. InsideOut integrates with Claude Code and Kiro IDE, allowing you to design, price, and deploy infrastructure directly from your AI app builder without opening the InsideOut interface.
+Yes. InsideOut integrates with Claude Code, Codex, Kiro, Antigravity, and any MCP-compatible AI development environment, allowing you to design, price, and deploy infrastructure directly from your editor without opening the InsideOut interface.
 
 **Do I own the generated Terraform?**
 Yes. InsideOut generates standard Terraform files that you own and can export, modify, or use independently of the platform.
@@ -271,10 +283,10 @@ Yes. InsideOut generates standard Terraform files that you own and can export, m
 Yes. InsideOut applies best-practice defaults but every setting is overridable. You control the final configuration before deployment.
 
 **What clouds does InsideOut support?**
-AWS, Google Cloud Platform, and Azure. AWS has the deepest support with the widest range of resource types.
+AWS and Google Cloud Platform. AWS has the deepest support with the widest range of resource types. Azure support is upcoming.
 
 **Is InsideOut suitable for AI application backends?**
-Yes. InsideOut explicitly supports AI stack architectures and is designed to work within AI-native development environments like Claude Code and Kiro IDE.
+Yes. InsideOut explicitly supports AI stack architectures and is designed to work within AI-native development environments like Claude Code, Codex, Kiro, Antigravity, and other MCP-compatible tools.
 
 **How does pricing work?**
 Cost estimates for your exact stack are surfaced before deployment. Contact Luther Systems for platform pricing: contact@luthersystems.com

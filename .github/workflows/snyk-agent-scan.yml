@@ -1,0 +1,22 @@
+name: Snyk Agent Scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  snyk-agent-scan:
+    name: Scan agent skills
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - name: Scan skills for security issues
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: ./scripts/snyk-scan.sh
