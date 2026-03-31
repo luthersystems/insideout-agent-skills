@@ -1,0 +1,24 @@
+name: Publish to skills.sh
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: Register skill on skills.sh
+    runs-on: ubuntu-latest
+    # Skip SNAPSHOT tags
+    if: "!contains(github.ref_name, 'SNAPSHOT')"
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Register skill via npx skills add
+        run: npx -y skills add luthersystems/insideout-agent-skills
