@@ -197,7 +197,7 @@ The `~/.agents/skills/` directory is the standard cross-tool location. Most AI c
 
 ---
 
-## Supported Services (50+)
+## Supported Services (60+)
 
 | Category | AWS | GCP |
 |----------|-----|-----|
