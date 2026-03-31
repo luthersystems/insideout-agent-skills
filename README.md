@@ -14,7 +14,7 @@ npx skills add luthersystems/insideout-agent-skills
 
 Works with **Claude Code**, **Codex**, **Cursor**, **Kiro**, **Windsurf**, and [30+ other tools](https://agentskills.io).
 
-**[Try the web app](https://insideout.luthersystemsapp.com/)** -- no install required.
+**[View on Skills.sh](https://skills.sh/luthersystems/insideout-agent-skills/insideout)** | **[Try the web app](https://insideout.luthersystemsapp.com/)** -- no install required.
 
 ---
 
@@ -295,6 +295,7 @@ Cost estimates for your exact stack are surfaced before deployment. Contact Luth
 
 ## Resources
 
+- [Skills.sh](https://skills.sh/luthersystems/insideout-agent-skills/insideout) -- skill listing on the Skills registry
 - [InsideOut Platform](https://insideout.luthersystems.com)
 - [Web App](https://insideout.luthersystemsapp.com/) -- try InsideOut without any IDE
 - [Demo Video](https://insideout.luthersystems.com/demo-video)
