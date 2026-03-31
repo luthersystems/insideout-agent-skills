@@ -231,7 +231,7 @@ Security best practices applied automatically. Observability configured from day
 You own the generated Terraform files. Use InsideOut defaults or override any setting. No lock-in; the output is standard infrastructure-as-code.
 
 ### Managed Operations
-Luther Systems sets up and manages critical infrastructure. Ongoing updates, patching, and operational support included.
+Luther Systems sets up and manages critical infrastructure. Ongoing updates and operational support included.
 
 ---
 
