@@ -37,5 +37,8 @@ skills-lock.json
 # Firecrawl cache
 .firecrawl/
 
+# Environment variables
+.env
+
 # Temporary files
 .tmp/
