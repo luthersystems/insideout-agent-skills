@@ -53,7 +53,7 @@ InsideOut eliminates this. You describe your application; InsideOut handles the 
 
 Once installed, just ask:
 
-> "Build me a scalable API backend on AWS with a database and auth."
+> "Build me a scalable backend for my golang microservices app on AWS with a DB and auth."
 
 InsideOut will:
 1. Propose an architecture (ECS, RDS, Cognito, ALB, VPC...)
@@ -62,7 +62,7 @@ InsideOut will:
 4. Deploy to your AWS or GCP account
 
 ```
-You: "I need infrastructure for an e-commerce platform, 50k monthly users on AWS"
+You: "I need infrastructure for an e-commerce platform, 1k monthly users on AWS"
 
 Riley: "I'd recommend ECS for your containers, RDS PostgreSQL for your database,
         ElastiCache Redis for sessions, and an ALB. Estimated cost: ~$350/month.
