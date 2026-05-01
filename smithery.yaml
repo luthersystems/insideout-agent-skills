@@ -1,0 +1,27 @@
+# Smithery listing configuration for InsideOut (Riley)
+# Docs: https://smithery.ai/docs/build/project-config/smithery.yaml
+# Submit via: https://smithery.ai/submit
+#
+# This is a remote-hosted MCP server — Smithery does not build or run it,
+# it just connects to the URL below. Per the Smithery schema:
+#   - Listing metadata (name, description, icon, categories, tags) is
+#     pulled from this repo's README.md and the Smithery web UI, NOT from
+#     this file. Keep README.md authoritative.
+#   - The tool inventory is discovered at runtime via the standard MCP
+#     `tools/list` call against the `url` below. Do NOT duplicate tool
+#     descriptions here — they will go stale vs. the live server.
+#   - configSchema is required by the schema even when the server takes
+#     no client-provided config (which it doesn't — auth is handled
+#     downstream during the conversation).
+
+deployment:
+  type: remote
+
+startCommand:
+  type: http
+  url: https://app.luthersystems.com/v1/insideout-mcp
+  configSchema:
+    type: object
+    properties: {}
+    required: []
+  exampleConfig: {}

@@ -1,12 +1,25 @@
 # InsideOut by Luther Systems
 
-> InsideOut is a cloud infrastructure automation platform. Describe your application in natural language and InsideOut will design, configure, deploy, and manage production-ready backend infrastructure for you — in minutes, not weeks. It works standalone or integrated directly into AI app builders such as Claude Code and Kiro IDE via MCP.
+> InsideOut is an agentic cloud infrastructure builder and manager. Describe your goal in plain language and Riley — your AI infrastructure advisor — guides you through requirements, service selection, cost estimation, Terraform generation, deployment, and ongoing production management on AWS or GCP. Works standalone at insideout.luthersystemsapp.com or integrated directly into AI coding tools such as Claude Code and Kiro IDE via MCP. No authentication or API keys required to start designing.
 
 InsideOut is built by Luther Systems, an enterprise automation company founded in 2015 and headquartered in London, UK.
 
-InsideOut is not a general-purpose cloud console. It is specifically designed to eliminate infrastructure toil for developers and AI agents building applications. Key capabilities include: natural language to Terraform generation, pre-deployment cost estimation, security and observability configured by default, and full Terraform ownership with no lock-in.
+InsideOut is not a general-purpose cloud console. It is specifically designed to eliminate infrastructure toil for developers and AI agents building applications. Key capabilities include: natural-language to Terraform generation, pre-deployment cost estimation, security and observability configured by default, and full Terraform ownership with no lock-in.
 
-InsideOut supports AWS, Google Cloud Platform, and Azure. Supported components include EKS, ECS/Fargate, Lambda, VPC, CloudFront, WAF, PostgreSQL, Redis, Blob storage, NoSQL, SQS, Kafka, AWS Cognito, Okta, and Auth0.
+Behind a single conversational surface, InsideOut runs a six-agent system: Riley (lead infrastructure advisor and the persona users talk to), Hippo (cost estimation and pricing optimization), Joy (requirement gathering and user experience), Etch (Terraform code generation), Core (architecture validation and best practices), and Axel (deployment orchestration). The other agents work behind the scenes — from the caller's perspective, you talk to Riley.
+
+InsideOut supports AWS (25+ services) and Google Cloud Platform (20+ services) across:
+
+- Compute — AWS: EC2, ECS, EKS, Lambda. GCP: Compute Engine, Cloud Run, GKE, Cloud Functions
+- Database — AWS: RDS PostgreSQL, DynamoDB, ElastiCache, OpenSearch. GCP: Cloud SQL, Firestore, Memorystore
+- Networking — AWS: VPC, ALB, CloudFront, API Gateway. GCP: VPC, Cloud Load Balancing, Cloud CDN, API Gateway
+- Storage — AWS: S3. GCP: Cloud Storage
+- Security — AWS: WAF, KMS, Secrets Manager, Cognito. GCP: Cloud Armor, Cloud KMS, Secret Manager, Identity Platform
+- Messaging — AWS: SQS, MSK (Kafka). GCP: Pub/Sub
+- Observability — AWS: CloudWatch, Managed Grafana. GCP: Cloud Logging, Cloud Monitoring
+- AI/ML — AWS: Bedrock. GCP: Vertex AI
+- CI/CD — AWS: CodePipeline, GitHub Actions. GCP: Cloud Build
+- Backup — AWS: AWS Backup. GCP: GCP Backups
 
 ## Docs and References
 
@@ -15,21 +28,27 @@ InsideOut supports AWS, Google Cloud Platform, and Azure. Supported components i
 
 ## Product
 
-- [InsideOut Site](https://insideout.luthersystems.com): Main product site: information and links
-- [InsideOut Application](https://insideout.luthersystemsapp.com): Standalone app — design, deploy and manage infrastructure
-- [InsideOut Claude Code Plugin](https://github.com/luthersystems/insideout-claude-code): Deploy infrastructure directly from Claude Code
-- [InsideOut Kiro IDE Plugin](https://github.com/luthersystems/insideout-power): Deploy infrastructure directly from Kiro IDE
-- [Terraform Presets](https://github.com/luthersystems/insideout-terraform-presets): Standard Terraform modules used by InsideOut
+- [InsideOut Site](https://insideout.luthersystems.com): Main product site — information and links
+- [InsideOut Application](https://insideout.luthersystemsapp.com): Standalone web app — design, deploy, and manage infrastructure with no install
+- [InsideOut Claude Code Plugin](https://github.com/luthersystems/insideout-claude-code): Use Riley directly from Claude Code. Install with `/plugin marketplace add luthersystems/insideout-claude-code` then `/plugin install insideout`
+- [InsideOut Kiro IDE Plugin](https://github.com/luthersystems/insideout-power): Use Riley directly from Kiro IDE
+- [InsideOut MCP Endpoint](https://app.luthersystems.com/v1/insideout-mcp): Public hosted MCP server (streamable HTTP, no auth) — connect any MCP-compatible client
+- [Terraform Presets](https://github.com/luthersystems/insideout-terraform-presets): Production-grade Terraform modules used by Riley
 - [Terraform Modules](https://github.com/luthersystems/tf-modules): Underlying Luther Enterprise infrastructure modules
 
-## MCP Server Integrations
+## Discovery files
 
-- [MCP Confluent (Kafka)](https://github.com/luthersystems/mcp-confluent): MCP server for Confluent/Kafka
-- [MCP Google Drive](https://github.com/luthersystems/mcp-server-google-drive): MCP server for Google Drive
-- [MCP SAP HANA](https://github.com/luthersystems/mcp-server-hana): MCP server for SAP HANA
+- [Smithery listing config](https://github.com/luthersystems/insideout-agent-skills/blob/main/smithery.yaml): MCP-catalog configuration for the hosted InsideOut MCP server
+- [Agent Skills](https://github.com/luthersystems/insideout-agent-skills): InsideOut for AI agents — install via `npx skills add luthersystems/insideout-agent-skills` (works with Claude Code, Codex, Cursor, Kiro, Windsurf, and 30+ other tools)
+
+## Community and Support
+
+- [Discord](https://insideout.luthersystems.com/discord): Chat with the developers and other InsideOut users
+- [Tech Call](https://insideout.luthersystems.com/tech-call): Talk with the InsideOut engineering team
+- [General Inquiry Call](https://insideout.luthersystems.com/general-call): Talk with Luther Systems
+- [Contact Email](mailto:contact@luthersystems.com): contact@luthersystems.com
 
 ## Company
 
 - [Luther Systems](https://www.luthersystems.com): Company homepage
 - [Luther Systems GitHub](https://github.com/luthersystems): All open source repositories
-- [Contact](mailto:contact@luthersystems.com): contact@luthersystems.com
