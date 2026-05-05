@@ -37,6 +37,13 @@ tags:
 startCommand:
   type: http
   url: https://app.luthersystems.com/v1/insideout-mcp
+  # InsideOut MCP is intentionally no-auth, no client config required.
+  # Empty schema declares this explicitly so Smithery's scanner doesn't
+  # warn "No config schema provided".
+  configSchema:
+    type: object
+    properties: {}
+    additionalProperties: false
 
 tools:
   - name: help
