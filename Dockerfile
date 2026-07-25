@@ -9,4 +9,4 @@
 #
 # The image runs in stdio mode by default; override the backend with
 #   docker run -e INSIDEOUT_BASE_URL=https://insideout.luthersystemsapp.com ...
-FROM luthersystems/insideout-mcp:v0.36.3
+FROM luthersystems/insideout-mcp:v0.50.1
