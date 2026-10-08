@@ -307,12 +307,6 @@ Cost estimates for your exact stack are surfaced before deployment. Contact Luth
 - [Subreddit](https://www.reddit.com/r/luthersystems/)
 - [llms.txt](llms.txt) -- machine-readable product summary for LLM discovery
 
-### MCP Server Integrations
-
-- [Confluent (Kafka)](https://github.com/luthersystems/mcp-confluent)
-- [Google Drive](https://github.com/luthersystems/mcp-server-google-drive)
-- [SAP HANA](https://github.com/luthersystems/mcp-server-hana)
-
 ---
 
 ## About Luther Systems
