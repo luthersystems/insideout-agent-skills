@@ -1,6 +1,6 @@
 # InsideOut by Luther Systems
 
-[![smithery badge](https://smithery.ai/badge/luther-systems/insideout)](https://smithery.ai/servers/luther-systems/insideout)
+[![Smithery](https://img.shields.io/badge/Smithery-InsideOut-orange)](https://smithery.ai/servers/luther-systems/insideout)
 
 > Cloud infrastructure automation. Describe your application in natural language and InsideOut will design, configure, deploy, and manage production-ready backend infrastructure -- in minutes, not weeks.
 
