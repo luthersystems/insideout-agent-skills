@@ -4,7 +4,7 @@
 # repo (mcp-server/cmd/insideout-mcp/) and published to Docker Hub by
 # .github/workflows/mcp-server-release.yaml on every merge to main and
 # every v* tag. This file lets directories that build from a Dockerfile
-# (Glama, Docker MCP Registry) ingest the same artifact without duplicating
+# (Glama) ingest the same artifact without duplicating
 # the build pipeline.
 #
 # The image runs in stdio mode by default; override the backend with
