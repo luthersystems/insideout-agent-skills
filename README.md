@@ -1,6 +1,6 @@
 # InsideOut by Luther Systems
 
-[![smithery badge](https://smithery.ai/badge/luther-systems/insideout)](https://smithery.ai/servers/luther-systems/insideout)
+[![Smithery](https://img.shields.io/badge/Smithery-InsideOut-orange)](https://smithery.ai/servers/luther-systems/insideout)
 
 > Cloud infrastructure automation. Describe your application in natural language and InsideOut will design, configure, deploy, and manage production-ready backend infrastructure -- in minutes, not weeks.
 
@@ -306,12 +306,6 @@ Cost estimates for your exact stack are surfaced before deployment. Contact Luth
 - [Agent Skills Standard](https://agentskills.io)
 - [Subreddit](https://www.reddit.com/r/luthersystems/)
 - [llms.txt](llms.txt) -- machine-readable product summary for LLM discovery
-
-### MCP Server Integrations
-
-- [Confluent (Kafka)](https://github.com/luthersystems/mcp-confluent)
-- [Google Drive](https://github.com/luthersystems/mcp-server-google-drive)
-- [SAP HANA](https://github.com/luthersystems/mcp-server-hana)
 
 ---
 

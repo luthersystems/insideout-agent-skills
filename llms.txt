@@ -22,12 +22,6 @@ InsideOut supports AWS, Google Cloud Platform, and Azure. Supported components i
 - [Terraform Presets](https://github.com/luthersystems/insideout-terraform-presets): Standard Terraform modules used by InsideOut
 - [Terraform Modules](https://github.com/luthersystems/tf-modules): Underlying Luther Enterprise infrastructure modules
 
-## MCP Server Integrations
-
-- [MCP Confluent (Kafka)](https://github.com/luthersystems/mcp-confluent): MCP server for Confluent/Kafka
-- [MCP Google Drive](https://github.com/luthersystems/mcp-server-google-drive): MCP server for Google Drive
-- [MCP SAP HANA](https://github.com/luthersystems/mcp-server-hana): MCP server for SAP HANA
-
 ## Company
 
 - [Luther Systems](https://www.luthersystems.com): Company homepage
