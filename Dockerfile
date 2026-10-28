@@ -10,3 +10,8 @@
 # The image runs in stdio mode by default; override the backend with
 #   docker run -e INSIDEOUT_BASE_URL=https://insideout.luthersystemsapp.com ...
 FROM luthersystems/insideout-mcp:v0.36.3
+
+# The base already runs as UID 65532 (ko on Chainguard static sets it).
+# Restate it here so this file, read on its own, says the image does not
+# run as root (Trivy DS-0002) and a base change cannot switch it silently.
+USER 65532
