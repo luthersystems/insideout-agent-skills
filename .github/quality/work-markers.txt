@@ -1,0 +1,6 @@
+# Allowlist for the shared work marker gate (luthersystems/.github,
+# actions/work-markers). Only for words that are not work: copied source,
+# data, quoted text. Deferred work names its issue on the marker instead.
+#
+# path | text | expires | issue | reason
+scripts/init_skill.py | * | never | - | Vendored Codex skill-creator source (commit afa5a1b). Its markers are placeholders it writes into a new skill, not deferred work here; a whole-file row survives an upstream refresh.
