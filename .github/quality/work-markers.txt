@@ -3,10 +3,4 @@
 # data, quoted text. Deferred work names its issue on the marker instead.
 #
 # path | text | expires | issue | reason
-scripts/init_skill.py | [TODO: Complete and informative explanation | never | - | Placeholder text the script writes into a new skill for its author to fill in; it is template output, not deferred work in this repo.
-scripts/init_skill.py | [TODO: 1-2 sentences explaining | never | - | Placeholder text the script writes into a new skill for its author to fill in; it is template output, not deferred work in this repo.
-scripts/init_skill.py | [TODO: Choose the structure | never | - | Placeholder text the script writes into a new skill for its author to fill in; it is template output, not deferred work in this repo.
-scripts/init_skill.py | [TODO: Replace with the first main section | never | - | Placeholder text the script writes into a new skill for its author to fill in; it is template output, not deferred work in this repo.
-scripts/init_skill.py | [TODO: Add content here. | never | - | Placeholder text the script writes into a new skill for its author to fill in; it is template output, not deferred work in this repo.
-scripts/init_skill.py | # TODO: Add actual script logic here | never | - | Placeholder text the script writes into a new skill for its author to fill in; it is template output, not deferred work in this repo.
-scripts/init_skill.py | complete the TODO items | never | - | The script's own hint that names the placeholders above.
+scripts/init_skill.py | * | never | - | Vendored Codex skill-creator source (commit afa5a1b). Its markers are placeholders it writes into a new skill, not deferred work here; a whole-file row survives an upstream refresh.
